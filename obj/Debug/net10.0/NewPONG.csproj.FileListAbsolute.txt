@@ -1,0 +1,14 @@
+/Users/axel/OOP1/NewPONG/bin/Debug/net10.0/NewPONG
+/Users/axel/OOP1/NewPONG/bin/Debug/net10.0/NewPONG.deps.json
+/Users/axel/OOP1/NewPONG/bin/Debug/net10.0/NewPONG.runtimeconfig.json
+/Users/axel/OOP1/NewPONG/bin/Debug/net10.0/NewPONG.dll
+/Users/axel/OOP1/NewPONG/bin/Debug/net10.0/NewPONG.pdb
+/Users/axel/OOP1/NewPONG/obj/Debug/net10.0/NewPONG.GeneratedMSBuildEditorConfig.editorconfig
+/Users/axel/OOP1/NewPONG/obj/Debug/net10.0/NewPONG.AssemblyInfoInputs.cache
+/Users/axel/OOP1/NewPONG/obj/Debug/net10.0/NewPONG.AssemblyInfo.cs
+/Users/axel/OOP1/NewPONG/obj/Debug/net10.0/NewPONG.csproj.CoreCompileInputs.cache
+/Users/axel/OOP1/NewPONG/obj/Debug/net10.0/NewPONG.dll
+/Users/axel/OOP1/NewPONG/obj/Debug/net10.0/refint/NewPONG.dll
+/Users/axel/OOP1/NewPONG/obj/Debug/net10.0/NewPONG.pdb
+/Users/axel/OOP1/NewPONG/obj/Debug/net10.0/NewPONG.genruntimeconfig.cache
+/Users/axel/OOP1/NewPONG/obj/Debug/net10.0/ref/NewPONG.dll
