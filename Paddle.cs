@@ -13,4 +13,9 @@ public class Paddle : IEntity
     {
         
     }
+
+    public void Render(Table table)
+    {
+        
+    }
 }

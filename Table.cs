@@ -11,13 +11,17 @@ public class Table
     
     public void Render()
     {
-        for(int x = 0; x < width; x++)
+        for (int y = 0; y < height; y++)
         {
-            Console.SetCursorPosition(x,0);
-            Console.Write("-");
+            for (int x = 0; x < width; x++)
+            {
+                Console.SetCursorPosition(x, y);
 
-            Console.SetCursorPosition(x, height - 1);
-            Console.Write("-");
+                if (y == 0 || y == height - 1)
+                    Console.Write("-");
+                else
+                  Console.Write(" ");
+            }
         }
     }
 }
