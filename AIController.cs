@@ -1,7 +1,15 @@
 public class AIController : IController
 {
-    int GetDirection()
+    public int GetDirection()
     {
+        if ()
+        {
+            return -1;
+        }
+        else if ()
+        {
+            return 1;
+        }
         return 0;
     }
 }
