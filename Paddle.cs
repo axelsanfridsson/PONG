@@ -20,16 +20,33 @@ public class Paddle : IEntity
 
     public void Update()
     {
-        
+        int direction = controller.GetDirection();
+        if (direction == -1)
+        {
+            yposition--;
+
+            for (int i = 0; i < paddleSize.Length; i++)
+            {
+                paddleSize[i]--;
+            }
+        }
+        else if (direction == 1)
+        {
+            yposition++;
+
+            for (int i = 0; i < paddleSize.Length; i++)
+            {
+                paddleSize[i]++;
+            }
+        }
     }
 
     public void Render(Table table)
     {
         foreach(int position in paddleSize)
         {
-            Console.SetCursorPosition(xposition, yposition);
+            Console.SetCursorPosition(xposition, position);
             Console.Write("|");
-            yposition++;
         }
     }
 }
