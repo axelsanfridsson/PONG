@@ -1,7 +1,7 @@
 public class Table
 {
-    public int height { get; }
-    public int width { get; }
+    public int height;
+    public int width;
 
     public Table(int height, int width)
     {

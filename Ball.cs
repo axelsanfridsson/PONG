@@ -5,9 +5,10 @@ public class Ball : IEntity
     private int yposition;
     private int speed = 1;
     private int xdirection = 1;
-    private int ydirection = 0;
+    private int ydirection = 1;
     private Paddle paddle1;
     private Paddle paddle2;
+    private Table table;
 
     public Ball(Table table, Paddle paddle1, Paddle paddle2)
     {
@@ -15,12 +16,15 @@ public class Ball : IEntity
         yposition = table.height / 2;
         this.paddle1 = paddle1;
         this.paddle2 = paddle2;
+        this.table = table;
     }
 
     public void Update()
     {
         xposition += (xdirection * speed);
         yposition += (ydirection * speed);
+
+        Bounce(table);
     }
 
     public void Render(Table table)
@@ -30,26 +34,17 @@ public class Ball : IEntity
         Console.SetCursorPosition(0, table.height);
     }
 
-    public void Bounce(Table table, Paddle paddle1, Paddle paddle2)
+    public void Bounce(Table table)
     {
-         // Studs mot toppen och botten
+        // Top and bottom walls
         if (yposition <= 0 || yposition >= table.height - 1)
         {
             ydirection *= -1;
         }
 
-        // Studs mot första paddeln
-        if (xposition == paddle1.xposition &&
-            yposition >= paddle1.yposition &&
-            yposition < paddle1.yposition + paddle1.paddleSize.Length)
-        {
-            xdirection *= -1;
-        }
-
-        // Studs mot andra paddeln
-        if (xposition == paddle2.xposition &&
-            yposition >= paddle2.yposition &&
-            yposition < paddle2.yposition + paddle2.paddleSize.Length)
+        // Paddle collisions
+        if (paddle1.CheckCollision(xposition, yposition) ||
+            paddle2.CheckCollision(xposition, yposition))
         {
             xdirection *= -1;
         }

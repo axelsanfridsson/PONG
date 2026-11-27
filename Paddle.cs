@@ -4,6 +4,7 @@ public class Paddle : IEntity
     private int xposition;
     private int yposition;
     private int[] paddleSize;
+    private IController controller;
 
     public Paddle(Table table, int xposition, int[] paddleSize)
     {
@@ -40,6 +41,18 @@ public class Paddle : IEntity
             }
         }
     }
+
+    public bool CheckCollision(int ballX, int ballY)
+{
+    if (ballX == xposition &&
+        ballY >= yposition &&
+        ballY < yposition + paddleSize.Length)
+    {
+        return true;
+    }
+
+    return false;
+}
 
     public void Render(Table table)
     {
